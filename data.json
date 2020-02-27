@@ -1,0 +1,37 @@
+[
+  {
+    "name": "Æble",
+    "kcal": 55,
+    "fat": 0.6
+  },
+  {
+    "name": "Banan",
+    "kcal": 93,
+    "fat": 0.2
+  },
+  {
+    "name": "Pære",
+    "kcal": 49,
+    "fat": 0.1
+  },
+  {
+    "name": "Letmælk",
+    "kcal": 48,
+    "fat": 1.5
+  },
+  {
+    "name": "Sødmælk",
+    "kcal": 64,
+    "fat": 3.5
+  },
+  {
+    "name": "Muslibar",
+    "kcal": 435,
+    "fat": 15
+  },
+  {
+    "name": "Æg",
+    "kcal": 137,
+    "fat": 9.2
+  }
+]

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fødevare vejviser</title>
+    <link rel="stylesheet" href="app.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Fødevare vejviser</h1>
+      <div class="form-group">
+        <label for="show-food-input">Navn på fødevare</label>
+        <input
+          id="show-food-input"
+          type="text"
+          class="form-control"
+          placeholder="(F.eks.: letmælk, æg, banan)"
+        />
+      </div>
+
+      <div class="center">
+        <button id="show-food-button" class="btn success">Find fødevare</button>
+      </div>
+
+      <div id="food-alert" class="alert"></div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
