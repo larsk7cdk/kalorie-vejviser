@@ -1,0 +1,15 @@
+.jumbotron {
+  background-color: transparent;
+}
+
+label.invalid {
+  color: red;
+}
+
+input[type='text'].invalid {
+  border: 1px solid red;
+}
+
+.hide {
+  display: none;
+}

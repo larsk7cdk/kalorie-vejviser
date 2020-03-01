@@ -4,36 +4,62 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fødevare vejviser</title>
-    <link rel="stylesheet" href="app.css" />
+
+    <link rel="stylesheet" href="./libs/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/app.css" />
+    <script defer src="./libs/jquery-3.4.1.min.js"></script>
+    <script defer src="./libs/jquery.validate.min.js"></script>
+    <script defer src="./libs/bootstrap.bundle.min.js"></script>
+    <script defer src="./scripts/app.js"></script>
   </head>
 
   <body>
-    <form class="container">
+    <form id="search-form" class="container jumbotron">
       <h1>Fødevare vejviser</h1>
+
       <div class="form-group">
         <label for="input">Navn på fødevare eller menu</label>
         <input
-          id="input"
+          id="search-input"
+          name="search_input"
           type="text"
-          class="form-control"
+          class="form-control form-control-lg"
           autofocus
           placeholder="(F.eks.: letmælk, æg, banan)"
-          oninput="validate(event)"
         />
-        <label id="message-alert"></label>
       </div>
 
-      <div class="center">
-        <button id="search-button" class="btn success" disabled="true">
-          Find fødevare
+      <div class="text-center">
+        <button id="search-button" class="btn btn-success btn-lg">
+          Find fødevare eller menu
         </button>
       </div>
 
-      <div id="food-alert" class="alert"></div>
+      <table id="food-table" class="table table-sm table-striped mt-5 hide">
+        <thead>
+          <tr>
+            <th scope="col">Fødevare</th>
+            <th scope="col">Kalorier</th>
+            <th scope="col">Fedt</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
 
-      <div id="menu-alert" class="alert"></div>
+      <table id="menu-table" class="table table-sm table-striped mt-5 hide">
+        <thead>
+          <tr>
+            <th scope="col">Færdigretter i cafeterie</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+
+      <div id="no-result" class="mt-5 hide">
+        <div class="alert alert-warning" role="alert">
+          Der kunne ikke findes nogle fødevare eller færdigretter
+        </div>
+      </div>
     </form>
-
-    <script src="app.js"></script>
   </body>
 </html>
