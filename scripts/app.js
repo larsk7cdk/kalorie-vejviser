@@ -15,27 +15,28 @@ const VALIDATOR_CONFIG = {
       required: "Feltet skal være udfyldt!",
       minlength: "Din indtastning skal være på minimum 2 karakterer!"
     }
-  }
+  },
+  submitHandler: validateSubmitHandler
 }
 
 // Document Ready
 $(function() {
-  $("#search-form").validate({
-    VALIDATOR_CONFIG,
-    submitHandler: validatorSubmitHandler
-  })
+  validatorAddMethods()
+  $("#search-form").validate(VALIDATOR_CONFIG)
 })
 
 // Validation functions
 function validatorAddMethods() {
   jQuery.validator.addMethod(
     "numberNotAllowed",
-    (value, element) => isNaN(value),
+    function(value, element) {
+      return isNaN(value)
+    },
     "Må ikke være et tal!"
   )
 }
 
-function validatorSubmitHandler(form) {
+function validateSubmitHandler(form) {
   form.preventDefault
   const searchInput = document.getElementById("search-input")
 
