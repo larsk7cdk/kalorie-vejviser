@@ -8,24 +8,31 @@
   </head>
 
   <body>
-    <div class="container">
+    <form class="container">
       <h1>Fødevare vejviser</h1>
       <div class="form-group">
-        <label for="show-food-input">Navn på fødevare</label>
+        <label for="input">Navn på fødevare eller menu</label>
         <input
-          id="show-food-input"
+          id="input"
           type="text"
           class="form-control"
+          autofocus
           placeholder="(F.eks.: letmælk, æg, banan)"
+          oninput="validate(event)"
         />
+        <label id="message-alert"></label>
       </div>
 
       <div class="center">
-        <button id="show-food-button" class="btn success">Find fødevare</button>
+        <button id="search-button" class="btn success" disabled="true">
+          Find fødevare
+        </button>
       </div>
 
       <div id="food-alert" class="alert"></div>
-    </div>
+
+      <div id="menu-alert" class="alert"></div>
+    </form>
 
     <script src="app.js"></script>
   </body>
